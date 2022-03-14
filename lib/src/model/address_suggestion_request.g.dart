@@ -25,6 +25,7 @@ AddressSuggestionRequest _$AddressSuggestionRequestFromJson(Map<String, dynamic>
         json['from_bound'] == null ? null : AddressSuggestionValue.fromJson(json['from_bound'] as Map<String, dynamic>),
     lowerBoundary:
         json['to_bound'] == null ? null : AddressSuggestionValue.fromJson(json['to_bound'] as Map<String, dynamic>),
+    restrictValue: json['restrict_value'] as bool,
   );
 }
 
@@ -37,4 +38,5 @@ Map<String, dynamic> _$AddressSuggestionRequestToJson(AddressSuggestionRequest i
       'locations_boost': instance.locationsPriority?.map((e) => e?.toJson())?.toList(),
       'from_bound': instance.upperBoundary?.toJson(),
       'to_bound': instance.lowerBoundary?.toJson(),
+      'restrict_value': instance.restrictValue,
     };

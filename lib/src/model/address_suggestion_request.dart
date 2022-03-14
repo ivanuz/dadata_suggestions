@@ -34,19 +34,23 @@ class AddressSuggestionRequest {
   @JsonKey(name: 'to_bound')
   AddressSuggestionValue lowerBoundary;
 
+  @JsonKey(name: 'restrict_value')
+  bool restrictValue;
+
   ///AddressSuggestionRequest represents an serializable object
   ///used to perform suggestion queries.
   ///[query] is required field.
   ///[count] defaults to `10` and [language] defaults to `ru`.
   AddressSuggestionRequest(
     this.query, {
-    this.count,
-    this.language,
+    this.count = 10,
+    this.language = 'ru',
     this.constraints,
     this.radiusConstraints,
     this.locationsPriority,
     this.upperBoundary,
     this.lowerBoundary,
+    this.restrictValue = false,
   });
 
   factory AddressSuggestionRequest.fromJson(Map<String, dynamic> json) => _$AddressSuggestionRequestFromJson(json);
