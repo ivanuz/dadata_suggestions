@@ -48,8 +48,7 @@ class RevgeocodeSuggestionRequest {
   ///New instance may be created with query of [String] type instead of
   ///a pair of [double]s.
   ///Tries parse latitude and longitude out of string and throws if fails.
-  RevgeocodeSuggestionRequest.fromString(String latLon,
-      {String delimiter = ','}) {
+  RevgeocodeSuggestionRequest.fromString(String latLon, {String delimiter = ','}) {
     final llParts = latLon.split(delimiter);
     if (llParts.length != 2) {
       throw 'Query string can not be split: wrong format or delimiter';

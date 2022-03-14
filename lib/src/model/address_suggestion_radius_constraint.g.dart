@@ -6,8 +6,7 @@ part of 'address_suggestion_radius_constraint.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-AddressSuggestionRadiusConstraint _$AddressSuggestionRadiusConstraintFromJson(
-    Map<String, dynamic> json) {
+AddressSuggestionRadiusConstraint _$AddressSuggestionRadiusConstraintFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['lat', 'lon']);
   return AddressSuggestionRadiusConstraint(
     latitude: (json['lat'] as num)?.toDouble(),
@@ -16,8 +15,7 @@ AddressSuggestionRadiusConstraint _$AddressSuggestionRadiusConstraintFromJson(
   );
 }
 
-Map<String, dynamic> _$AddressSuggestionRadiusConstraintToJson(
-        AddressSuggestionRadiusConstraint instance) =>
+Map<String, dynamic> _$AddressSuggestionRadiusConstraintToJson(AddressSuggestionRadiusConstraint instance) =>
     <String, dynamic>{
       'lat': instance.latitude,
       'lon': instance.longitude,

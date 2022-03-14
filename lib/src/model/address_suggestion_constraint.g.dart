@@ -6,8 +6,7 @@ part of 'address_suggestion_constraint.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-AddressSuggestionConstraint _$AddressSuggestionConstraintFromJson(
-    Map<String, dynamic> json) {
+AddressSuggestionConstraint _$AddressSuggestionConstraintFromJson(Map<String, dynamic> json) {
   return AddressSuggestionConstraint(
     region: json['region'] as String,
     city: json['city'] as String,
@@ -29,9 +28,7 @@ AddressSuggestionConstraint _$AddressSuggestionConstraintFromJson(
   );
 }
 
-Map<String, dynamic> _$AddressSuggestionConstraintToJson(
-        AddressSuggestionConstraint instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$AddressSuggestionConstraintToJson(AddressSuggestionConstraint instance) => <String, dynamic>{
       'region': instance.region,
       'city': instance.city,
       'street_type_full': instance.streetTypeFull,

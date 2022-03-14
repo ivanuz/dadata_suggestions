@@ -87,14 +87,12 @@ SuggestionData _$SuggestionDataFromJson(Map<String, dynamic> json) {
     ..qcGeo = json['qc_geo']
     ..qcComplete = json['qc_complete']
     ..qcHouse = json['qc_house']
-    ..historyValues =
-        (json['history_values'] as List)?.map((e) => e as String)?.toList()
+    ..historyValues = (json['history_values'] as List)?.map((e) => e as String)?.toList()
     ..unparsedParts = json['unparsed_parts'] as String
     ..source = json['source'] as String;
 }
 
-Map<String, dynamic> _$SuggestionDataToJson(SuggestionData instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$SuggestionDataToJson(SuggestionData instance) => <String, dynamic>{
       'postal_code': instance.postalCode,
       'country': instance.country,
       'country_iso_code': instance.countryIsoCode,

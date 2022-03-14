@@ -23,8 +23,7 @@ class AddressSuggestion {
     this.data,
   });
 
-  factory AddressSuggestion.fromJson(Map<String, dynamic> json) =>
-      _$AddressSuggestionFromJson(json);
+  factory AddressSuggestion.fromJson(Map<String, dynamic> json) => _$AddressSuggestionFromJson(json);
 
   Map<String, dynamic> toJson() => _$AddressSuggestionToJson(this);
 }

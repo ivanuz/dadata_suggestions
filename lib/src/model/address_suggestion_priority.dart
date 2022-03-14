@@ -16,8 +16,7 @@ class AddressSuggestionPriority {
   /// using [AddressSuggestionConstraint] or [AddressSuggestionRadiusConstraint].
   AddressSuggestionPriority(this.kladrId);
 
-  factory AddressSuggestionPriority.fromJson(Map<String, dynamic> json) =>
-      _$AddressSuggestionPriorityFromJson(json);
+  factory AddressSuggestionPriority.fromJson(Map<String, dynamic> json) => _$AddressSuggestionPriorityFromJson(json);
 
   Map<String, dynamic> toJson() => _$AddressSuggestionPriorityToJson(this);
 }

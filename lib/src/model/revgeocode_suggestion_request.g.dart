@@ -6,8 +6,7 @@ part of 'revgeocode_suggestion_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-RevgeocodeSuggestionRequest _$RevgeocodeSuggestionRequestFromJson(
-    Map<String, dynamic> json) {
+RevgeocodeSuggestionRequest _$RevgeocodeSuggestionRequestFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['lat', 'lon']);
   return RevgeocodeSuggestionRequest(
     latitude: (json['lat'] as num)?.toDouble(),
@@ -18,9 +17,7 @@ RevgeocodeSuggestionRequest _$RevgeocodeSuggestionRequestFromJson(
   );
 }
 
-Map<String, dynamic> _$RevgeocodeSuggestionRequestToJson(
-        RevgeocodeSuggestionRequest instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$RevgeocodeSuggestionRequestToJson(RevgeocodeSuggestionRequest instance) => <String, dynamic>{
       'lat': instance.latitude,
       'lon': instance.longitude,
       'count': instance.count,

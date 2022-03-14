@@ -1,3 +1,4 @@
+import 'package:dadata_suggestions/src/model/address_suggestion_value.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'address_suggestion_constraint.dart';
@@ -27,43 +28,11 @@ class AddressSuggestionRequest {
   @JsonKey(name: 'locations_boost')
   List<AddressSuggestionPriority> locationsPriority;
 
-  LevelBoundry _upperBoundary;
-  LevelBoundry _lowerBoundary;
-
   @JsonKey(name: 'from_bound')
-  String get upperBoundary {
-    return _upperBoundary.value;
-  }
-
-  @JsonKey(name: 'from_bound')
-  set upperBoundary(dynamic value) {
-    if (value is String) {
-      _upperBoundary = LevelBoundryValue.forValue(value);
-      return;
-    }
-    if (value is LevelBoundry) {
-      _upperBoundary = value;
-      return;
-    }
-    _upperBoundary = null;
-  }
+  AddressSuggestionValue upperBoundary;
 
   @JsonKey(name: 'to_bound')
-  String get lowerBoundary {
-    return _lowerBoundary.value;
-  }
-
-  @JsonKey(name: 'to_bound')
-  set lowerBoundary(dynamic value) {
-    if (value is String) {
-      _lowerBoundary = LevelBoundryValue.forValue(value);
-      return;
-    }
-    if (value is LevelBoundry) {
-      _lowerBoundary = value;
-    }
-    _lowerBoundary = null;
-  }
+  AddressSuggestionValue lowerBoundary;
 
   ///AddressSuggestionRequest represents an serializable object
   ///used to perform suggestion queries.
@@ -76,13 +45,11 @@ class AddressSuggestionRequest {
     this.constraints,
     this.radiusConstraints,
     this.locationsPriority,
-    LevelBoundry upperBoundary,
-    LevelBoundry lowerBoundary,
-  })  : this._upperBoundary = upperBoundary,
-        this._lowerBoundary = lowerBoundary;
+    this.upperBoundary,
+    this.lowerBoundary,
+  });
 
-  factory AddressSuggestionRequest.fromJson(Map<String, dynamic> json) =>
-      _$AddressSuggestionRequestFromJson(json);
+  factory AddressSuggestionRequest.fromJson(Map<String, dynamic> json) => _$AddressSuggestionRequestFromJson(json);
 
   Map<String, dynamic> toJson() => _$AddressSuggestionRequestToJson(this);
 }

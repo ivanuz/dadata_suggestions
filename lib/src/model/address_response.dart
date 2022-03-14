@@ -10,8 +10,7 @@ class AddressResponse {
 
   AddressResponse();
 
-  factory AddressResponse.fromJson(Map<String, dynamic> json) =>
-      _$AddressResponseFromJson(json);
+  factory AddressResponse.fromJson(Map<String, dynamic> json) => _$AddressResponseFromJson(json);
 
   Map<String, dynamic> toJson() => _$AddressResponseToJson(this);
 }

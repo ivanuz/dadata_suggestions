@@ -40,8 +40,7 @@ class AddressSuggestionRadiusConstraint {
     int radiusMeters,
   }) : this._radiusMeters = radiusMeters;
 
-  AddressSuggestionRadiusConstraint.fromString(String latLon,
-      {String delimiter = ','}) {
+  AddressSuggestionRadiusConstraint.fromString(String latLon, {String delimiter = ','}) {
     final llParts = latLon.split(delimiter);
     if (llParts.length != 2) {
       throw 'Query string can not be split: wrong format or delimiter';
@@ -57,10 +56,8 @@ class AddressSuggestionRadiusConstraint {
     );
   }
 
-  factory AddressSuggestionRadiusConstraint.fromJson(
-          Map<String, dynamic> json) =>
+  factory AddressSuggestionRadiusConstraint.fromJson(Map<String, dynamic> json) =>
       _$AddressSuggestionRadiusConstraintFromJson(json);
 
-  Map<String, dynamic> toJson() =>
-      _$AddressSuggestionRadiusConstraintToJson(this);
+  Map<String, dynamic> toJson() => _$AddressSuggestionRadiusConstraintToJson(this);
 }

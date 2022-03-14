@@ -253,8 +253,7 @@ class SuggestionData {
 
   SuggestionData();
 
-  factory SuggestionData.fromJson(Map<String, dynamic> json) =>
-      _$SuggestionDataFromJson(json);
+  factory SuggestionData.fromJson(Map<String, dynamic> json) => _$SuggestionDataFromJson(json);
 
   Map<String, dynamic> toJson() => _$SuggestionDataToJson(this);
 }
