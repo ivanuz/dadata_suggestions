@@ -8,7 +8,7 @@ part of 'address_suggestion_value.dart';
 
 AddressSuggestionValue _$AddressSuggestionValueFromJson(Map<String, dynamic> json) {
   return AddressSuggestionValue(
-    json['value'] as String,
+    value: json['value'] as String,
   );
 }
 

@@ -7,7 +7,7 @@ class AddressSuggestionValue {
   @JsonKey(name: "value")
   String value;
 
-  AddressSuggestionValue(this.value);
+  AddressSuggestionValue({this.value});
 
   factory AddressSuggestionValue.fromJson(Map<String, dynamic> json) => _$AddressSuggestionValueFromJson(json);
 
