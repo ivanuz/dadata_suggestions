@@ -9,6 +9,7 @@ export 'src/model/address_suggestion_request.dart';
 export 'src/model/level_boundry.dart';
 export 'src/model/revgeocode_suggestion_request.dart';
 export 'src/model/suggestion_data.dart';
+export 'src/model/address_suggestion_value.dart';
 
 import 'dart:convert';
 
